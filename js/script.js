@@ -1,7 +1,7 @@
 const listToDo = new Vue({
-el:"#app",
+el: "#app",
 data: {
-   
+   newTodo : "",
     toDo:[
         {
             text: `fare la spesa`,
@@ -34,9 +34,13 @@ data: {
     ]
 },
 
-// methods:{
-//     newTask(){
-//         const obj = new task 
-//     }
-// }
+methods:{
+   addItem(){
+       if(this.newTodo!==""){
+           this.toDo.push(this.newTodo);
+           this.newTodo = "";
+       }
+         
+    },
+}
 });
