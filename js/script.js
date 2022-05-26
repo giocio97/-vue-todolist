@@ -41,9 +41,9 @@ methods:{
            done: false
        }
 
-       if(this.newTodo!==" "){
-           this.toDo.push(this.newTodo);
-           this.newTodo = " ";
+       if(this.newTodo!==""){
+           this.toDo.push(nuovoAdd);
+           this.newTodo = "";
        }
          
     },
