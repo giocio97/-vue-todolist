@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>To do list</title>
 </head>
@@ -12,8 +13,8 @@
     <h1> To Do List</h1>
 
     <div class="new-todo">
-        <input v-model="newTodo" @keyup.enter=" addItem" type="text">
-        <button click=" addItem">Aggiungi</button>
+        <input type="text" v-model="newTodo" @keyup.enter="addItem" >
+        <button @click="addItem">Aggiungi</button>
 
     </div>
 
@@ -21,7 +22,7 @@
         <ul>
             <li v-for="(item, i) in toDo" >
                 {{item.text}}
-                <i class="fas fa-times"></i> 
+                <i  class="fas fa-times" @click="deleteItem(i)"></i>
             </li>
            
         </ul>

@@ -36,11 +36,21 @@ data: {
 
 methods:{
    addItem(){
-       if(this.newTodo!==""){
+       const nuovoAdd = {
+           text: this.newTodo,
+           done: false
+       }
+
+       if(this.newTodo!==" "){
            this.toDo.push(this.newTodo);
-           this.newTodo = "";
+           this.newTodo = " ";
        }
          
     },
+
+    deleteItem(index){
+        this.toDo.splice(index,1);
+    },
+
 }
 });
