@@ -20,7 +20,7 @@
 
     <div class="list-todo">
         <ul>
-            <li v-for="(item, i) in toDo" >
+            <li v-for="(item, i) in toDo" :class="toDo[i].done === true ? `fatto` :``" :key="i"  >
                 {{item.text}}
                 <i  class="fas fa-times" @click="deleteItem(i)"></i>
             </li>

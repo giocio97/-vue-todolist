@@ -5,7 +5,7 @@ data: {
     toDo:[
         {
             text: `fare la spesa`,
-            done: true
+            done: false
         },
 
         {
@@ -51,6 +51,8 @@ methods:{
     deleteItem(index){
         this.toDo.splice(index,1);
     },
+
+  
 
 }
 });

@@ -7,3 +7,7 @@
 .container{
     text-align: center;
 }
+
+.fatto{
+    text-decoration: line-through;
+}
